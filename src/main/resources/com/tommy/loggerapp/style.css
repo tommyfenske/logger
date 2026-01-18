@@ -1,0 +1,64 @@
+.gray-bg {
+    -fx-background-color: #333333;
+}
+
+.black-bg {
+    -fx-background-color: #222222;
+}
+
+.green-bg {
+    -fx-background-color: #1e6823;
+}
+
+.pale-green-bg {
+    -fx-background-color: #44a340; /* #8cbe65; */
+
+}
+
+.button {
+    -fx-background-color: #8cbe65;
+    -fx-background-radius: 8;
+    -fx-border-color: #44a340;
+    -fx-border-radius: 8;
+    -fx-text-fill: #222222;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.green-border {
+    -fx-border-color: #44a340;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+    -fx-border-radius: 8;
+    -fx-padding: 8;
+}
+
+.round-bg {
+    -fx-background-radius: 0;
+}
+
+.white-text {
+    -fx-text-fill: #FFFFFF;
+}
+
+.black-border {
+    -fx-border-style: solid;
+    -fx-border-color: BLACK;
+    -fx-border-radius: 8;
+}
+
+.field-label {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.field-text-area {
+    -fx-font-size: 16;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #333333;
+}
+
+.field-text-area .content {
+    -fx-background-color: #333333;
+}

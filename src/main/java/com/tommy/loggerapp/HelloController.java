@@ -1,12 +1,20 @@
 package com.tommy.loggerapp;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HelloController {
+
+    Stage stage;
 
     public void initialize() {
         System.out.println("Loading Log Buttons");
@@ -14,6 +22,7 @@ public class HelloController {
             System.out.println(log);
             logListVBox.getChildren().addFirst(createLogListButton(log));
         }
+
     }
 
     @FXML
@@ -27,16 +36,17 @@ public class HelloController {
     @FXML
     private VBox logListVBox;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-        LogManager lm = LogManager.getInstance();
-        System.out.println(lm.toString());
-    }
 
     @FXML
     protected void onSaveButtonClick() {
         Saver.getInstance().saveLogManagerToFile();
+    }
+
+    @FXML
+    protected void onTemplateButtonClick() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view2.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 640, 360);
+        stage.setScene(scene);
     }
 
     @FXML
@@ -52,6 +62,7 @@ public class HelloController {
 
     protected Button createLogListButton(Log log) {
         Button el = new Button(log.getDate().toString());
+        el.getStyleClass().add("fill-green");
         el.setUserData(log);
         el.setPrefWidth( logListVBox.getMaxWidth() );
 
@@ -80,9 +91,13 @@ public class HelloController {
     private VBox createFieldVBox(Field field) {
         VBox el = new VBox();
 
-        el.getChildren().add(new Label(field.getPrompt()));
+        Label l = new Label(field.getPrompt());
+        l.getStyleClass().add("field-label");
+        el.getChildren().add(l);
 
         TextArea ta = new TextArea(field.getResponse());
+        ta.getStyleClass().add("field-text-area");
+        ta.getStyleClass().add("green-border");
         ta.setUserData(field);
         ta.setWrapText(true);
 
@@ -97,5 +112,11 @@ public class HelloController {
         el.getChildren().add(ta);
 
         return el;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+        System.out.println(stage);
+        //stage.setScene();
     }
 }
