@@ -12,7 +12,9 @@ public class Log {
     public Log() {
         this.date = LocalDate.now();
         this.fields =  new ArrayList<>();
-        fields.add(new Field());
+        fields.add(new Field("What did you do today?"));
+        fields.add(new Field("What made you happy?"));
+        fields.add(new Field("How can you make this app better?"));
     }
 
     public LocalDate getDate() {

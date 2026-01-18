@@ -16,13 +16,17 @@
 }
 
 .button {
-    -fx-background-color: #8cbe65;
+    -fx-background-color: #44a340;
     -fx-background-radius: 8;
-    -fx-border-color: #44a340;
+    -fx-border-color: #1e6823;
     -fx-border-radius: 8;
     -fx-text-fill: #222222;
     -fx-font-size: 14;
     -fx-font-weight: bold;
+}
+.button:hover {
+    -fx-background-color: #8cbe65;
+    -fx-border-color: #44a340;
 }
 
 .green-border {

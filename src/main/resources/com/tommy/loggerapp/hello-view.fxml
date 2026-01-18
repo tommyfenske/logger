@@ -40,7 +40,7 @@
                   <children>
                      <Label fx:id="logPreviewLabel" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" styleClass="white-text" text="No Log Selected">
                         <font>
-                           <Font name="System Bold" size="20.0" />
+                           <Font name="System Bold" size="24.0" />
                         </font>
                      </Label>
                      <VBox fx:id="logFieldBox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="16.0" VBox.vgrow="ALWAYS">
@@ -50,14 +50,6 @@
                         <padding>
                            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
                         </padding>
-                        <children>
-                           <TextArea prefHeight="200.0" prefWidth="200.0">
-                              <styleClass>
-                                 <String fx:value="field-text-area" />
-                                 <String fx:value="green-border" />
-                              </styleClass>
-                           </TextArea>
-                        </children>
                      </VBox>
                   </children>
                   <styleClass>
@@ -69,14 +61,20 @@
          </ScrollPane>
          <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" styleClass="black-bg" HBox.hgrow="NEVER">
             <content>
-               <VBox fx:id="logListVBox" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" spacing="4.0">
-                  <padding>
-                     <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-                  </padding>
+               <VBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" spacing="4.0">
                   <styleClass>
                      <String fx:value="black-bg" />
                      <String fx:value="green-border" />
                   </styleClass>
+                  <Label styleClass="field-label" text="Logs" />
+                   <VBox fx:id="logListVBox" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" spacing="4.0">
+                       <padding>
+                           <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                       </padding>
+                       <styleClass>
+                           <String fx:value="black-bg" />
+                       </styleClass>
+                   </VBox>
                </VBox>
             </content>
          </ScrollPane>

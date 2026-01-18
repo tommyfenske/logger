@@ -11,16 +11,16 @@
     </padding>
    <HBox alignment="CENTER" prefWidth="200.0" spacing="16.0" VBox.vgrow="NEVER">
       <children>
-         <Label text="Logger2">
+         <Label text="Logger">
             <font>
                <Font name="System Bold" size="24.0" />
             </font></Label>
          <HBox prefWidth="200.0" spacing="8.0" style="-fx-border-color: BLACK;" HBox.hgrow="ALWAYS">
             <children>
-               <Button mnemonicParsing="false" onAction="#onTodayLogButtonClick" text="Today's Log2" />
+               <Button mnemonicParsing="false" onAction="#onTodayLogButtonClick" text="Today's Log" />
                <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" text="Search" />
                <DatePicker />
-               <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save Logs2" />
+               <Button mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save Logs" />
             </children>
             <padding>
                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />

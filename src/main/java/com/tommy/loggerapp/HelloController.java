@@ -2,6 +2,7 @@ package com.tommy.loggerapp;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -63,6 +64,7 @@ public class HelloController {
     protected Button createLogListButton(Log log) {
         Button el = new Button(log.getDate().toString());
         el.getStyleClass().add("fill-green");
+        el.setAlignment(Pos.BASELINE_LEFT);
         el.setUserData(log);
         el.setPrefWidth( logListVBox.getMaxWidth() );
 
@@ -100,6 +102,7 @@ public class HelloController {
         ta.getStyleClass().add("green-border");
         ta.setUserData(field);
         ta.setWrapText(true);
+        ta.setMinHeight(200);
 
         ta.setOnKeyTyped( e -> {
             System.out.println( "Text changed" );
